@@ -3,7 +3,7 @@
 def verify_card_number(card_number):
     # Step 1: Calculate sum of odd-positioned digits (from right)
     sum_of_odd_digits = 0
-    card_number_reversed = card_number[::-1]  # Reverse the card number
+    card_number_reversed = card_number[::-1]  # Reverse the card number to simplify processing from right to left
     odd_digits = card_number_reversed[::2]    # Get every other digit
 
     for digit in odd_digits:
