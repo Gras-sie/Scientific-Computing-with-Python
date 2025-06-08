@@ -21,10 +21,12 @@ STRINGS:
 - f-strings allow embedding expressions: f"value is {variable}"
 
 TUPLES:
-- Immutable sequences of values
-- Created using parentheses: (value1, value2)
-- Access elements by index: tuple[0]
-- Example in code: (nums, r'\d') is a tuple of (minimum_count, pattern)
+- Immutable (unchangeable) ordered sequences of values.
+- Created using parentheses: (value1, value2, ...).
+- Used to group related items together, especially when the order matters and the collection should not be modified.
+- A 2-element tuple can represent a pair of related data (e.g., a coordinate (x, y), or a setting and its value).
+- Access elements by index: tuple[0].
+- Example in code: (nums, r'\d') is a 2-element tuple representing a constraint (minimum count) and its corresponding regex pattern.
 
 LISTS:
 - Mutable sequences of values
@@ -98,12 +100,12 @@ def generate_password(length=16, nums=1, special_chars=1, uppercase=1, lowercase
         for _ in range(length):
             password += secrets.choice(all_characters)  # Randomly select one character at a time
         
-        # List of tuples containing (minimum_count, regex_pattern) for each constraint
+        # List of tuples. Each tuple groups a minimum count with its corresponding regex pattern.
         constraints = [
-            (nums, r'\d'),                    # Tuple for digits: (min_count, digit_pattern)
-            (special_chars, fr'[{symbols}]'),  # Tuple for special chars: (min_count, special_char_pattern)
-            (uppercase, r'[A-Z]'),            # Tuple for uppercase: (min_count, uppercase_pattern)
-            (lowercase, r'[a-z]')             # Tuple for lowercase: (min_count, lowercase_pattern)
+            (nums, r'\d'),                    # Tuple: (minimum_digits, digit_pattern)
+            (special_chars, fr'[{symbols}]'),  # Tuple: (minimum_special_chars, special_char_pattern)
+            (uppercase, r'[A-Z]'),            # Tuple: (minimum_uppercase, uppercase_pattern)
+            (lowercase, r'[a-z]')             # Tuple: (minimum_lowercase, lowercase_pattern)
         ]
 
         # Check if all constraints are met

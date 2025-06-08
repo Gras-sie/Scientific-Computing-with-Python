@@ -699,4 +699,10 @@ my_numbers = [64, 34, 25, 12, 22, 11, 90]
     - **List Comprehensions/Loops**: For applying case conversions to elements in a list of strings or parts of a string.
 - **Where to find examples**: Coming Soon.
 
+### Shortest Path Algorithm
+This module demonstrates basic shortest path logic. The updated code includes:
+- A function called “shortest_path” that computes both paths and distances for each node.
+- A Dijkstra-based function for computing shortest distances, using a priority queue (heapq).
+- In-depth comments describing every step of the flow, from initializing data structures to printing or returning final results.
+
 This cheat sheet covers the main Python concepts used throughout the repository's projects. Each project demonstrates different aspects of scientific computing and Python programming. It will be updated as more projects are added.
