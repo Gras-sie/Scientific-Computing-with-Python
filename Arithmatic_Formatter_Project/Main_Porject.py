@@ -1,3 +1,54 @@
+"""
+PYTHON ARITHMETIC FORMATTER CONCEPTS CHEAT SHEET:
+
+FUNCTION DEFINITIONS:
+- Define function with: def function_name(parameters):
+- Default parameters: def function(param=default_value):
+- Return values: return expression
+
+STRING FORMATTING:
+- f-strings: f"Value: {variable}" interpolates variables into strings
+- String methods:
+  * rjust(width): Right-justify text in field of width
+  * ljust(width): Left-justify text in field of width
+  * join(iterable): Join elements of iterable with string as separator
+
+LISTS:
+- Create list: my_list = [value1, value2, ...]
+- Append to list: my_list.append(value)
+- List operations: len(list), sum(list), max(list), min(list)
+- List comprehension: [expression for item in iterable if condition]
+
+CONTROL FLOW:
+- Conditionals: if condition: ... elif condition: ... else: ...
+- Boolean operators: and, or, not
+- Comparison operators: ==, !=, <, >, <=, >=
+
+ERROR HANDLING:
+- Early returns with error messages
+- Input validation before processing
+- Consistent error message formats
+
+STRING OPERATIONS:
+- Concatenation: string1 + string2
+- Repetition: '-' * 5 creates '-----'
+- Splitting: 'a b c'.split() creates ['a', 'b', 'c']
+
+TYPE CONVERSION:
+- str(value): Convert to string
+- int(string): Convert string to integer
+- float(string): Convert string to float
+
+TEXT ALIGNMENT:
+- Right alignment: string.rjust(width)
+- Left alignment: string.ljust(width)
+- Center alignment: string.center(width)
+
+MULTI-LINE STRING FORMATTING:
+- Using newline character '\n' to create multi-line output
+- Building formatted output line by line
+"""
+
 def arithmetic_arranger(problems, show_answers=False):
     # Error check 1: Too many problems
     if len(problems) > 5:
