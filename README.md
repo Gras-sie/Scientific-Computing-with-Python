@@ -292,6 +292,7 @@ flattened = [num for row in matrix for num in row] # [1, 2, 3, 4]
 - **Where to find examples**: `ShortestPath_Algorithm.py` (e.g., `unvisited = list(graph)` is not a comprehension, but `distances = {node: 0 if node == start else float('inf') for node in graph}` is a dictionary comprehension).
 
 ### Tuples
+
 - **What they are**: Ordered, immutable (unchangeable) sequences of items. Often used for fixed collections of items, for data that should not be modified, or as keys in dictionaries (since they are hashable if all their elements are hashable).
 - **How they work**:
     - Defined using parentheses `()`, with items separated by commas. Parentheses are optional in many contexts if the commas make the tuple clear.
