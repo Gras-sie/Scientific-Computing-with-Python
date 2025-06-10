@@ -906,13 +906,11 @@ print(factorial(5)) # 120
 - **Example**:
 ```python
 class Dog:  # Class definition
-    # Class attribute (shared by all instances)
-    species = "Canis familiaris"
+    species = "Canis familiaris" # Class attribute (shared by all instances)
 
     def __init__(self, name, age): # Constructor method
-        # Instance attributes (specific to each instance)
-        self.name = name
-        self.age = age
+        self.name = name # Instance attribute
+        self.age = age   # Instance attribute
 
     def bark(self): # Instance method
         return "Woof!"
@@ -1252,11 +1250,6 @@ class Temperature:
     def fahrenheit(self): # Read-only computed property
         print("Calculating Fahrenheit...")
         return (self._celsius * 9/5) + 32
-
-
-
-
-
 
 temp = Temperature(25)
 print(temp.celsius)      # Calls getter: Getting Celsius value... 25
