@@ -96,6 +96,7 @@ This repository contains various Python projects demonstrating scientific comput
 - [Algorithms](#algorithms)
   - [Searching](#searching)
   - [Sorting](#sorting)
+  - [Backtracking](#backtracking)
 - [Project-Specific Concepts](#project-specific-concepts)
   - [Password Generation](#password-generation)
   - [Cryptography (Vigenere Cipher)](#cryptography-vigenere-cipher)
@@ -106,6 +107,9 @@ This repository contains various Python projects demonstrating scientific comput
   - [Shortest Path Algorithm](#shortest-path-algorithm)
   - [Tower of Hanoi](#tower-of-hanoi)
   - [Merge Sort Algorithm](#merge-sort-algorithm)
+  - [Budget Tracking](#budget-tracking)
+  - [Sudoku Solver](#sudoku-solver)
+  - [Binary Search Trees](#binary-search-trees)
 
 
 ## Basic Python Concepts
@@ -886,7 +890,7 @@ def factorial(n: int) -> int:
 
 print(factorial(5)) # 120
 ```
-- **Where to find examples**: `Budget_App_Project/Recursion/Tower_Of_Hanoi.py`
+- **Where to find examples**: `Budget_App_Project/Recursion/Tower_Of_Hanoi.py`, `Sudoku_Solver.py` (solver method), `Binary_Search_Tree.py` (_insert, _search, _delete methods)
 
 ## Object-Oriented Programming (OOP)
 - **What it is**: A programming paradigm based on the concept of "objects", which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods). OOP aims to make code more modular, reusable, and easier to maintain.
@@ -927,7 +931,7 @@ print(dog2.describe())  # Calling instance method: Lucy is 5 years old.
 print(Dog.species)      # Accessing class attribute: Canis familiaris
 print(dog1.species)     # Instances can also access class attributes
 ```
-- **Where to find examples**: Coming Soon.
+- **Where to find examples**: `Budget_App.py` (Category class), `Sudoku_Solver.py` (Board class), `Binary_Search_Tree.py` (TreeNode and BinarySearchTree classes)
 
 ### Constructors (`__init__`)
 - **What it is**: A special method in a class that is automatically called when an object of that class is created (instantiated). Its primary purpose is to initialize the instance's attributes.
@@ -1417,6 +1421,46 @@ else:
 
 ## Error Handling (Exceptions)
 
+### Try-Except
+- **What it is**: A mechanism to gracefully handle runtime errors (exceptions) that might occur during program execution, preventing the program from crashing.
+- **How they work**:
+    - `try` block: Contains the code that might raise an exception.
+    - `except ExceptionType:` block: If an exception of `ExceptionType` occurs in the `try` block, the code in this `except` block is executed. If `ExceptionType` is omitted, it catches any exception (generally not recommended for broad catches).
+- **Example**:
+```python
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+# Program continues instead of crashing
+```
+- **Where to find examples**: Coming Soon.
+
+### Handling Multiple Exceptions
+- **What it is**: Handling different types of exceptions in different ways, or handling multiple specific exceptions with the same block of code.
+- **How it works**:
+    - Multiple `except` blocks: Each handles a specific exception type.
+    - Tuple of exceptions: `except (TypeError, ValueError):` handles either `TypeError` or `ValueError`.
+    - `except Exception as e:`: Catches any exception (subclass of `Exception`) and assigns the exception object to `e`, allowing you to inspect the error.
+    - `else` block: (Optional) Executes if the `try` block completes without raising any exceptions.
+    - `finally` block: (Optional) Always executes, regardless of whether an exception occurred or was handled. Useful for cleanup operations (e.g., closing files).
+- **Example**:
+```python
+try:
+    value = int(input("Enter a number: "))
+    result = 100 / value
+except ValueError:
+    print("Invalid input: Please enter a whole number.")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+else:
+    print(f"Result is: {result}")
+finally:
+    print("Execution finished or attempted.")
+```
+- **Where to find examples**: Coming Soon.
 ### Try-Except
 - **What it is**: A mechanism to gracefully handle runtime errors (exceptions) that might occur during program execution, preventing the program from crashing.
 - **How they work**:
