@@ -16,7 +16,12 @@ class R2Vector:
     
     #def __getattribute__(self, attr):                
     #   return 'calling __getattribute__'
-
+    def __add__(self, other):
+        if type(self) != type(other):
+            return NotImplemented
+        kwargs = {key: getattr(self, key) + getattr(other, key) for key in vars(self)}
+        return self.__class__(**kwargs)
+        
 class R3Vector(R2Vector):
     def __init__(self, *, x, y, z):
         super().__init__(x=x, y=y)
